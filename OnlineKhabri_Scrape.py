@@ -24,7 +24,7 @@ def scrape_article_links(url):
     article_links = []
     response = requests.get(url)
     if response.status_code == 200:
-        soup = BeautifulSoup(response.text, 'html.parser')
+        soup = BeautifulSoup(response.text, 'xml.parser')
         items = soup.find_all('item')
         for item in items:
             pub_date_str = item.find('pubDate').text
