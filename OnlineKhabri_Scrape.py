@@ -3,7 +3,6 @@ import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
 import google.generativeai as genai
-import base64
 
 # Set up Google's Generative AI API
 genai.configure(api_key=st.secrets["GOOGLE_API_KEY"])
